@@ -23,43 +23,58 @@ const ContactHero = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 px-4 py-20 text-center">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white text-sm font-medium mb-4">
-            Sağlıklı yaşam yolculuğunuzda yanınızdayız
+      <div className="container relative z-10 px-4 py-20">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          {/* Profile Picture */}
+          <div className="flex-shrink-0">
+            <div className="relative">
+              <div className="absolute inset-0 bg-white/20 rounded-full blur-2xl"></div>
+              <img
+                src={heroBanner}
+                alt="Diyetisyen Profil"
+                className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-white/30 shadow-2xl"
+              />
+            </div>
           </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-            İletişime Geçin
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-white/95 max-w-2xl mx-auto leading-relaxed">
-            Kişiselleştirilmiş beslenme danışmanlığı için benimle iletişime geçin. 
-            Sağlıklı yaşam hedeflerinize birlikte ulaşalım.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Button 
-              variant="hero" 
-              size="xl"
-              onClick={scrollToForm}
-              className="group"
-            >
-              Mesaj Gönder
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+
+          {/* Text Content */}
+          <div className="flex-1 space-y-8 text-center md:text-left">
+            <div className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white text-sm font-medium mb-4">
+              Sağlıklı yaşam yolculuğunuzda yanınızdayız
+            </div>
             
-            <Button 
-              variant="outline" 
-              size="xl"
-              className="bg-white/5 border-white/30 text-white hover:bg-white/15 backdrop-blur-sm"
-              onClick={() => {
-                const contactInfo = document.getElementById('contact-info');
-                contactInfo?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              İletişim Bilgileri
-            </Button>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+              İletişime Geçin
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-white/95 max-w-2xl leading-relaxed md:mx-0 mx-auto">
+              Kişiselleştirilmiş beslenme danışmanlığı için benimle iletişime geçin. 
+              Sağlıklı yaşam hedeflerinize birlikte ulaşalım.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 md:justify-start justify-center pt-4">
+              <Button 
+                variant="hero" 
+                size="xl"
+                onClick={scrollToForm}
+                className="group"
+              >
+                Mesaj Gönder
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                size="xl"
+                className="bg-white/5 border-white/30 text-white hover:bg-white/15 backdrop-blur-sm"
+                onClick={() => {
+                  const contactInfo = document.getElementById('contact-info');
+                  contactInfo?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                İletişim Bilgileri
+              </Button>
+            </div>
           </div>
         </div>
       </div>
