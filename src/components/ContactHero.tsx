@@ -36,7 +36,7 @@ const ContactHero = () => {
               Sağlıklı yaşam yolculuğunuzda yanınızdayız
             </div>
             
-            <h1 className="text-4xl lg:text-7xl font-bold text-white leading-tight md:text-5xl">Dyt. Serkan Durmaz</h1>
+            <h1 className="text-4xl lg:text-7xl font-bold text-white leading-tight md:text-5xl">Dyt. Serhat Durmaz</h1>
             
             <p className="text-xl md:text-2xl text-white/95 max-w-2xl leading-relaxed md:mx-0 mx-auto">Kişiselleştirilmiş beslenme danışmanlığı için benimle iletişime geçin. Sağlıklı yaşam hedeflerinize birlikte ulaşalım.</p>
             
